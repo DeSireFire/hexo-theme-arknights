@@ -540,7 +540,7 @@ aside {
       padding: 0;
       flex-shrink: 0;
       overflow: visible; }
-  .highlight {
+  .highlight, blockquote {
     margin: 0; }
   aside {
     width: 100%;
