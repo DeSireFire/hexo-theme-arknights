@@ -118,25 +118,94 @@ table {
   padding: 0 28px 0 5px;
   background-color: #fff; }
 
-.tag-list {
+.highlight {
+  overflow-x: auto; }
+  .highlight table td {
+    border: 0; }
+  .highlight table code {
+    background-color: transparent !important; }
+  .highlight table .gutter {
+    color: #000;
+    text-align: right;
+    background-color: #2bf;
+    position: relative;
+    left: 0; }
+    .highlight table .gutter, .highlight table .gutter pre, .highlight table .gutter span {
+      user-select: none;
+      pointer-events: none; }
+  .highlight table .code {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: .3s; }
+    .highlight table .code:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+
+.category-list, .tag-list {
   list-style: none;
   display: block;
-  margin: 0;
+  margin: 0; }
+
+.category-list {
   padding: 0; }
+
+.category-list-item {
+  position: relative; }
+  .category-list-item:hover a {
+    color: #2bf;
+    border-left: #2bf solid 5px;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .category-list-item:hover span {
+    color: #fff; }
+
+.category-list-link {
+  width: 100%;
+  padding: 6px 40% 6px 10px;
+  display: inline-block;
+  box-sizing: border-box; }
+  .category-list-link:before, .category-list-link:after {
+    color: #2bf;
+    content: '#';
+    padding: 0 5px; }
+
+.category-list-count {
+  padding: 3px 10px;
+  position: absolute;
+  right: 0; }
+
+.tag-list {
+  padding: 10px; }
 
 .tag-list-item {
   line-height: 23px;
-  background-color: #494949;
+  background-color: #313131;
   display: inline-block;
-  margin: 5px; }
+  margin: 5px;
+  border: #313131 solid 1px;
+  border-radius: 3px; }
+  .tag-list-item, .tag-list-item a, .tag-list-item span {
+    transition: .3s; }
+  .tag-list-item:hover {
+    border-color: #2bf; }
+    .tag-list-item:hover a {
+      color: #000;
+      background-color: #2bf; }
+    .tag-list-item:hover span {
+      background-color: #313131; }
+  .tag-list-item:active {
+    border-color: #fe2; }
+    .tag-list-item:active a {
+      background-color: #fe2; }
 
 .tag-list-link {
   color: #fff;
-  padding: 3px 12px;
+  padding: 3px 6px 3px 12px;
   display: inline-block; }
-  .tag-list-link:hover {
-    color: #fff;
-    background-color: #2bf; }
+
+.tag-list-count {
+  display: inline-block;
+  padding: 3px 6px;
+  color: #fff;
+  background-color: #494949; }
 
 header {
   position: sticky;
@@ -408,28 +477,6 @@ aside {
 #post-content table {
   width: 100%; }
 
-.highlight {
-  overflow-x: auto; }
-  .highlight table td {
-    border: 0; }
-  .highlight table code {
-    background-color: transparent !important; }
-  .highlight table .gutter {
-    color: #000;
-    text-align: right;
-    background-color: #2bf;
-    position: relative;
-    left: 0; }
-    .highlight table .gutter, .highlight table .gutter pre, .highlight table .gutter span {
-      user-select: none;
-      pointer-events: none; }
-  .highlight table .code {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
-    transition: .3s; }
-    .highlight table .code:hover {
-      background-color: rgba(255, 255, 255, 0.1); }
-
 #post-footer hr {
   border-color: #fe2; }
 
@@ -497,8 +544,9 @@ aside {
 #Archives, #Categories, #Tags {
   height: 100%;
   margin: 0 10px;
-  background-color: rgba(20, 21, 22, 0.8);
-  transition: .3s; }
+  background-color: rgba(20, 21, 22, 0.8); }
+  #Archives, #Archives h1, #Categories, #Categories h1, #Tags, #Tags h1 {
+    transition: .3s; }
   #Archives h1, #Categories h1, #Tags h1 {
     margin: 0;
     padding: 0 15px;
@@ -506,11 +554,20 @@ aside {
     background-color: #fff;
     font-size: medium;
     font-family: BenderLight; }
-  #Archives:hover, #Categories:hover, #Tags:hover {
+  #Archives:hover, #Archives:target, #Categories:hover, #Categories:target, #Tags:hover, #Tags:target {
     background-color: rgba(255, 255, 255, 0.05); }
+    #Archives:hover h1, #Archives:target h1, #Categories:hover h1, #Categories:target h1, #Tags:hover h1, #Tags:target h1 {
+      background-color: #2bf; }
 
 #Archives {
   flex-grow: 5; }
+  #Archives h2 {
+    margin: 0; }
+  #Archives time {
+    float: right; }
+
+.categories, .tags {
+  display: inline-block; }
 
 #Categories {
   flex-grow: 1;
