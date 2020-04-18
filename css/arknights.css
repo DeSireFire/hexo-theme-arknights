@@ -379,6 +379,9 @@ aside {
   #logo img {
     width: 100%; }
 
+#Dr a {
+  color: #fff; }
+
 #total {
   margin: 10px 0;
   font-family: BenderLight; }
@@ -530,6 +533,7 @@ aside {
 
 #archive-flex {
   height: 100%;
+  min-height: 600px;
   padding-bottom: 30px;
   box-sizing: border-box;
   display: flex;
@@ -562,12 +566,26 @@ aside {
 #Archives {
   flex-grow: 5; }
   #Archives h2 {
-    margin: 0; }
+    margin: 10px 0;
+    font-size: large; }
+    #Archives h2:before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 15px;
+      margin-right: 5px;
+      background-color: #fe2; }
   #Archives time {
-    float: right; }
+    color: #fff;
+    padding: 0 10px 0 20px; }
 
 .categories, .tags {
   display: inline-block; }
+
+#Archives-bg {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px; }
 
 #Categories {
   flex-grow: 1;
@@ -642,7 +660,13 @@ aside {
     bottom: 16px;
     right: 0; }
   #post-index {
-    margin: 16px 10px 0 10px; } }
+    margin: 16px 10px 0 10px; }
+  #archive-flex {
+    flex-direction: column; }
+  #archive-aside {
+    order: 1; }
+  #Categories {
+    margin: 10px; } }
 
 @media (min-width: 769px) {
   body {
