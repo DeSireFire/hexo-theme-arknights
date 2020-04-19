@@ -354,7 +354,6 @@ article {
 
 aside {
   max-height: 100%;
-  overflow-y: auto;
   color: #fff;
   padding: 0 20px;
   display: flex;
@@ -507,6 +506,25 @@ aside {
     #to-top a:before {
       content: '∧';
       pointer-events: none; }
+
+#reward {
+  color: #000;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); }
+  #reward summary {
+    background-color: #fe2; }
+  #reward div {
+    width: 40%;
+    margin: 0;
+    padding: 20px 0;
+    display: inline-block; }
+  #reward span {
+    color: #2bf;
+    padding-right: 10px; }
+  #reward img {
+    width: 80%;
+    max-width: 380px;
+    padding: 0 20px; }
 
 #post-index .toc {
   margin: 0;
