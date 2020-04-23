@@ -1,15 +1,13 @@
-// var canvas = document.getElementById('particle');
+// canvas: HTMLCanvasElement = document.getElementById('canvas-dust');
 // var ctx = canvas.getContext('2d');
 // var dustQuantity = Math.floor((window.innerWidth + window.innerHeight) / 8);
 // var point;
 // var i = 0;
-
 // // 设置 canvas 占满页面
 // function canvasResize() {
 //     canvas.width = window.innerWidth;
 //     canvas.height = window.innerHeight;
 // }
-
 // // 取屏幕随机点
 // function getPoint() {
 //     point = {
@@ -18,7 +16,6 @@
 //     }
 //     return point;
 // }
-
 // // 生成灰尘
 // function bulidPoint() {
 //     while (i < dustQuantity) {
@@ -31,7 +28,6 @@
 //         i++;
 //     }
 // }
-
 // canvasResize();
 // window.addEventListener("resize", canvasResize());
 // bulidPoint();
