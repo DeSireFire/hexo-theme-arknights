@@ -1,4 +1,3 @@
-"use strict";
 var dust = /** @class */ (function () {
     function dust(canvasID) {
         var canvas = document.getElementById(canvasID);
