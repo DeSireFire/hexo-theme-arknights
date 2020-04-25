@@ -1,4 +1,26 @@
-// canvas: HTMLCanvasElement = document.getElementById('canvas-dust');
+"use strict";
+var dust = /** @class */ (function () {
+    function dust(canvasID) {
+        var canvas = document.getElementById(canvasID);
+        if (canvas) {
+            this.canvas = canvas;
+            this.ctx = canvas.getContext('2d');
+            this.resize();
+        }
+        else {
+            throw new Error('canvasID 无效');
+        }
+    }
+    dust.prototype.resize = function () {
+        if (!(!this.canvas || !this.ctx)) {
+            this.canvas.width = window.innerWidth;
+            this.canvas.height = window.innerHeight;
+        }
+    };
+    return dust;
+}());
+new dust('canvas-dust');
+// var canvas = document.getElementById('particle');
 // var ctx = canvas.getContext('2d');
 // var dustQuantity = Math.floor((window.innerWidth + window.innerHeight) / 8);
 // var point;
